@@ -1,0 +1,40 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-28 14:34:31
+ * @LastEditTime: 2020-05-28 15:39:45
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /garbage-classify/templates/index.html
+--> 
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>垃圾分类</title> 
+</head>
+<body>
+	<div style="width:100%; text-align:center">
+		<div align="center">
+			<h2>垃圾分类</h2>
+		</div>
+        
+        <div align="center">
+			<img border="0" src={{ imgPath }} alt="Pulpit_rock" align="center" width="224", height="256"> <!-- width="304" height="228"-->
+        </div>
+        <div align="center">
+			<h2></h2>
+		</div>
+		<div>
+			<form action='/predict' method='post' enctype='multipart/form-data'>
+				<input type='file' name='file'> 
+				<input type='submit' value='Upload'>
+			</form>
+		</div>
+		
+        <h2 align="center"> 本次预测的结果是：{{ result }} </h2>
+        <h2 align="center"> 本次预测花费的时间是：{{ time }}毫秒 </h2>
+
+	</div>	
+
+</body>
+</html>
